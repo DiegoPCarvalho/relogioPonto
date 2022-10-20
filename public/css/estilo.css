@@ -1,0 +1,43 @@
+    .c {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 500px;
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    #usuario {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    #senha {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    #logo {
+        color: white;
+        margin-bottom: 40px;
+        margin-top: 0px;
+    }
+
+    .master {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .titulo {
+        margin-bottom: 0px;
+        margin-top: 15px;
+    }
+
+    .tb {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+        margin-bottom: 0px;
+    }

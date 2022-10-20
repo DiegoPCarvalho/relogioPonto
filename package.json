@@ -1,0 +1,31 @@
+{
+  "name": "relogioponto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "db": "json-server --watch db.json --port 7000 --host 192.168.1.227"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DiegoPCarvalho/relogioPonto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DiegoPCarvalho/relogioPonto/issues"
+  },
+  "homepage": "https://github.com/DiegoPCarvalho/relogioPonto#readme",
+  "dependencies": {
+    "axios": "^1.1.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.20",
+    "path": "^0.12.7",
+    "require": "^2.4.20"
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{!-- <style>
+        .c {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 500px;
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        #usuario {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #senha {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #logo {
+            color: white;
+            margin-bottom: 40px;
+            margin-top: 0px;
+        }
+
+        .master {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .titulo {
+            margin-bottom: 0px;
+            margin-top: 15px;
+        }
+
+        .tb {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 0px;
+        }
+    </style> --}}
+<link rel="stylesheet" href="/css/estilo.css">
+</head>
+
+<body>
+    <div class="titulo">
+        <h1 class="text-light d-flex justify-content-center tb">Relogio de Ponto</h1>
+    </div>
+    <div class="c">
+        <div class="master">
+            <div id="logo">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-lock">
+                        <rect x="3" y="11" width="18" height="12" rx="2" ry="2" />
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                    <rect xmlns="http://www.w3.org/2000/svg" x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path xmlns="http://www.w3.org/2000/svg" d="M7 11V7a5 5 0 0 1 10 0v4" />
+                    </svg>
+                </div>
+
+            </div>
+            <div id="usuario">
+                <label for="">Login:</label>
+                <input type="text" name="usuario" class="input-group-text texto">
+            </div>
+            <div id="senha">
+                <label for="">Senha:</label>
+                <input name="senha" type="password" class="input-group-text senhas">
+            </div>
+            <div id="nova">
+                <script src="/js/config.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
