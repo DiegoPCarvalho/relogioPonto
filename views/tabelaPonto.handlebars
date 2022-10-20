@@ -1,2 +1,15 @@
 {{>nav}}
 
+<link rel="stylesheet" href="/css/estilo.css">
+
+
+<body>
+    <div class="c">
+        <h1 id="hora"></h1>
+    </div>
+    <script>
+            if (localStorage.logado == "0") {
+                window.location.href = "http://192.168.15.80:5000/";
+            }
+    </script>
+</body>
