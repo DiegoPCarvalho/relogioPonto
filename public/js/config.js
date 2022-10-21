@@ -12,7 +12,7 @@ function createButton() {
 
 
       if (((usuario === usds.us1) && (senhas === usds.sns1)) || ((usuario === usds.us2) && (senhas === usds.sns2))) {
-         window.location.href = 'http://localhost:5000/home'
+         window.location.href = 'http://192.168.15.80:5000/home'
          localStorage.logado = 1;
          localStorage.nome = usuario;
       } else {

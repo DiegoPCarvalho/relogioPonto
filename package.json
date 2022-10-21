@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon app.js",
     "start": "node app.js",
-    "db": "json-server --watch db.json --port 7000 --host 192.168.1.227"
+    "db": "json-server --watch db.json --port 7000 --host 192.168.15.80"
   },
   "repository": {
     "type": "git",

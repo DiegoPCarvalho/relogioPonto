@@ -1,0 +1,29 @@
+/*function get() {
+            const url = `http://192.168.15.80:7000/${localStorage.getItem("nome")}`;
+            const data = axios.get(url)
+                .then(res => showResponse(res))*/
+
+
+            //const tabela = JSON.stringify(data)
+
+            /*let dados = {dado: []}
+
+            for(let i = 0; i < tab.length; i++){
+                dados.dado.push({
+                    ponto: data[i].ponto
+                })
+            }
+
+
+
+        }*/
+
+
+
+       /* function showResponse(res) {
+            document.querySelector('#text').innerHTML = JSON.stringify(res.data, null, '\t')
+        }
+
+        
+
+        get()*/

@@ -1,5 +1,10 @@
-    .espaco {
-        margin-left: 500px;
+    .b {
+        border: 5px solid white;
+        color: white;
+    }   
+
+    .f{
+        margin-left: 10px;
     }
     .c {
         display: flex;
@@ -24,8 +29,7 @@
     }
 
     .p {
-        display: flex;
-        justify-content: center;
+        display: grid;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.2);
         height: 300px;

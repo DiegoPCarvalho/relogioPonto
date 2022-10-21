@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+const axios = require('axios');
 const { engine } = require("express-handlebars");
 
 
@@ -50,11 +51,12 @@ app.get('/home', (req, res) =>{
     res.render('home', {active, desactive})
 });
 
-app.get('/tabelaPonto', (req, res) =>{
-   
-    const active = "active";
-    const desactive = "";
+app.get('/tabelaPonto', async (req, res) =>{
+
+    const active = "desactive";
+    const desactive = "active";
     res.render('tabelaPonto', {active, desactive})
+   
 });
 
 app.listen(port, (err) =>{

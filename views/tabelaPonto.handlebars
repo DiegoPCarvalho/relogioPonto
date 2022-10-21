@@ -4,12 +4,69 @@
 
 
 <body>
-    <div class="c">
-        <h1 id="hora"></h1>
+    <div class="container">
+        <div class="row display-3 text-light d-flex justify-content-center">
+            Tabela do Relogio de Ponto
+        </div>
+        <div class="row v">
+            <div class="col  d-flex mx-2 justify-content-end">
+                <input type="text" class="input-group-text" id="texto-user">
+                <input type="button" value="Buscar" class="btn btn-success f" onclick="tabela()">
+            </div>
+        </div>
+        <div class="row">
+            <table class="table">
+                <thead class="text-light">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col" class="">Ponto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <div id="texto" class="text-light">
+                        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-            if (localStorage.logado == "0") {
-                window.location.href = "http://localhost:5000/";
+        if (localStorage.logado == "0") {
+            window.location.href = "http://192.168.15.80:5000/";
+        }
+
+        function tabela() {
+
+                const url = `http://192.168.15.80:7000/${localStorage.getItem("nome")}`;
+                const data = axios.get(url)
+                                .then(res => exibir(res))
+
+            //const data = axios.get(`http://192.168.15.80:7000/${localStorage.getItem("nome")}`).then(resp => exibir(resp))
+            //const tabela = data.data;
+            /*let dados = { dado: [] }
+
+            for (let i = 0; i < tabela.length; i++) {
+                dados.dado.push({
+                    ponto: tabela[i].ponto
+                })
             }
+
+            return dados.dado*/
+        }
+
+        function exibir(res){
+            document.getElementById('texto').innerHTML = `
+            <h1>
+            ${JSON.stringify(res.data, null, '\t')}
+            </h1>
+            `
+            
+        }
+
+        
     </script>
+
 </body>
