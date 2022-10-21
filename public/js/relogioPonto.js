@@ -16,21 +16,15 @@ setInterval(function () {
     document.getElementById('hora').textContent = hora + ':' + minuto + ':' + segundo;
 }, 1000)
 
-function dateNow() {
-    let da = new Date().toLocaleString();
-    return da
+function data(){
+    let data = new Date().toLocaleDateString();
+
+    // let dia = data.getDate();
+    // let mes = data.getMonth() + 1;
+    // let ano = data.getFullYear();
+
+    return document.getElementById('data').textContent = data;
+        // .textContent = dia + "/" + mes + "/" + ano;
 }
 
-function addBanco() {
-    const url = 'http://192.168.1.227:7000/DiegoCavalho'
-
-    const data ={
-       ponto: this.dateNow()
-    } 
-
-    $.ajax({
-        type: "POST",
-        url: url,
-        data: data
-    });
-}
+data()

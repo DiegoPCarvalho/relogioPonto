@@ -1,13 +1,67 @@
 <link rel="stylesheet" href="/css/estilo.css">
 
-
 <body>
-    <div class="c">
-        <h1 id="hora"></h1>
+    <div>
+        <i>
+            <h1 class="text-light d-flex justify-content-center display-1">
+                Marque o seu Ponto
+            </h1>
+        </i>
+        {{!-- <input type="text" list="usuarios" class="text-dark input-group-text s" name="Usuario" id="usuario"
+            placeholder="selecione o Usuario..." />
+        <datalist id="usuarios">
+            <option value="DiegoC"></option>
+            <option value="Natanael"></option>
+            <option value="Douglas"></option>
+            <option value="Kleyton"></option>
+            <option value="Bruno"></option>
+            <option value="Gabriel"></option>
+            <option value="Guilherme"></option>
+            <option value="Allan"></option>
+            <option value="Vinicius"></option>
+            <option value="Lucas"></option>
+        </datalist> --}}
     </div>
+    <div class="p d-flex flex-column">
+        <i>
+            <h1 id="data" class="d-flex mb-5 text-light"></h1>
+        </i>
+        <i>
+            <h1 id="hora" class="text-light display-1"></h1>
+        </i>
+    </div>
+    <div class="d-flex">
+        <button id="botao" class="btn btn-primary v btn-lg" onclick="addBanco()">Marcar</button>
+    </div>
+    <script src="/js/relogioPonto.js"></script>
     <script>
-            if (localStorage.logado == "0") {
-                window.location.href = "http://192.168.15.80:5000/";
+        if (localStorage.logado == "0") {
+            window.location.href = "http://localhost:5000/";
+        }
+    </script>
+    <script>
+         function dateNow() {
+            let da = new Date().toLocaleString();
+            return da
+        }
+
+        function addBanco() {
+
+            //const user = document.getElementById('usuario').value
+            
+            const url = `http://192.168.1.227:7000/${localStorage.getItem("nome")}` ;
+            
+           const dados = {
+                ponto: this.dateNow()
             }
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: dados
+            });
+
+            alert('Ponto Marcado com Sucesso!!!')
+        }
     </script>
 </body>
