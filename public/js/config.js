@@ -11,7 +11,7 @@ function createButton() {
       const senhas = document.querySelector(".senhas").value
 
 
-      if (((usuario === usds.us1) && (senhas === usds.sns1)) || ((usuario === usds.us2) && (senhas === usds.sns2)) || ((usuario === usds.us3) && (senhas === usds.sns3))) {
+      if (((usuario === usds.us1) && (senhas === usds.sns1)) || ((usuario === usds.us2) && (senhas === usds.sns2)) || ((usuario === usds.us3) && (senhas === usds.sns3)) || ((usuario === usds.us4) && (senhas === usds.sns4))) {
          window.location.href = 'http://192.168.15.120:5000/home'
          localStorage.logado = 1;
          localStorage.nome = usuario;
@@ -35,5 +35,7 @@ const usds = {
    us2: 'Natanael',
    sns2: '55321',
    us3: 'Mateus',
-   sns3: '77852'
+   sns3: '77852',
+   us4: 'Lucas',
+   sns4: '1313'
 }

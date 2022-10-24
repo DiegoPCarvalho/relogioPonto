@@ -11,7 +11,7 @@
         <div class="row v">
             <div class="col  d-flex mx-2 justify-content-end">
                 <input type="text" class="input-group-text" id="texto-user" list="listaUsuarios">
-                <input type="button" value="Buscar" class="btn btn-success f">
+                <input type="button" value="Buscar" class="btn btn-success f" onclick="carregarDB()">
             </div>
             <div class="col  d-flex mx-2 justify-content-end">
                 <input type="text" class="input-group-text" id="texto-user-delete">
@@ -85,6 +85,19 @@
         $(document).ready(function () {
             $('#dtBasicExample').DataTable();
             $('.dataTables_length').addClass('bs-select');
-        }); 
+        });
+
+
+
+        function carregarDB() {
+            const user = document.getElementById("texto-user").value
+
+            if (localStorage.nome == "DiegoC") {
+                window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user}`
+            }else {
+                alert("Você não têm permissão para fazer essa pesquisa")
+                document.getElementById("texto-user").value=''
+            }
+        }
     </script>
 </body>
