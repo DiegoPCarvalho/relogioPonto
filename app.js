@@ -51,11 +51,24 @@ app.get('/home', (req, res) =>{
     res.render('home', {active, desactive})
 });
 
-app.get('/tabelaPonto', async (req, res) =>{
+app.get('/tabelaPonto/:estagio', async (req, res) =>{
 
+    const userDB = req.params.estagio
+    const data = await axios(`http://192.168.15.120:7000/${userDB}`)
+    const tab = data.data
+
+    let dados = { dado: [] }
+
+            for (let i = 0; i < tab.length; i++) {
+                dados.dado.push({
+                    id: tab[i].id,
+                    ponto: tab[i].ponto
+                })
+            }
+    
     const active = "desactive";
     const desactive = "active";
-    res.render('tabelaPonto', {active, desactive})
+    res.render('tabelaPonto', {active, desactive, dados})
    
 });
 

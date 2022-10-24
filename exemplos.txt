@@ -27,3 +27,72 @@
         
 
         get()*/
+
+
+
+         /* function tabela() {
+ 
+                 const url = `http://192.168.15.80:7000/${localStorage.getItem("nome")}`;
+                 const data = axios.get(url)
+                                 .then(res => exibir(res))
+ 
+             //const data = axios.get(`http://192.168.15.80:7000/${localStorage.getItem("nome")}`).then(resp => exibir(resp))
+             //const tabela = data.data;
+             /*let dados = { dado: [] }
+ 
+             for (let i = 0; i < tabela.length; i++) {
+                 dados.dado.push({
+                     ponto: tabela[i].ponto
+                 })
+             }
+ 
+            // return dados.dado
+         }*/
+
+        /*function exibir(res){
+            document.getElementById('texto').innerHTML = `
+            <h1>
+            ${JSON.stringify(res.data, null, '\t')}
+            </h1>
+            `
+            
+        }*/
+        /* setInterval(
+             function () {
+                 // const user = document.getElementById("texto-user").value
+                     const user2 = localStorage.getItem("nome")
+                     window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user2}`
+             }, 5000)*/
+
+
+        /*function carregarDB() {
+            const user2 = localStorage.getItem("nome")
+            if (localStorage.getItem("tempo") == "0") {
+                 return window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user2}`
+                localStorage.tempo = 1;
+            } else if (localStorage.getItem("tempo") == "1") {
+
+                setInterval(
+                    function () {
+                      return  window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user2}`
+                        localStorage.tempo = 0;
+                    }, 50000)
+            }
+        }
+
+        carregarDB()*/
+
+        /*function rodar(){
+             setInterval(function(){
+                    const user2 = localStorage.getItem("nome")
+                    window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user2}`
+        
+                   /* setInterval(function(){
+                        const user2 = localStorage.getItem("nome")
+                        window.location.href = `http://192.168.15.120:5000/tabelaPonto/${user2}`
+                    },50000)
+                }, 100)
+        }
+        
+        rodar()*/
+

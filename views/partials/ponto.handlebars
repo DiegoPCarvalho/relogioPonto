@@ -35,7 +35,7 @@
     <script src="/js/relogioPonto.js"></script>
     <script>
         if (localStorage.logado == "0") {
-            window.location.href = "http://192.168.15.80:5000/";
+            window.location.href = "http://192.168.15.120:5000/";
         }
     </script>
     <script>
@@ -48,7 +48,7 @@
 
             //const user = document.getElementById('usuario').value
 
-            const url = `http://192.168.15.80:7000/${localStorage.getItem("nome")}`;
+            const url = `http://192.168.15.120:7000/${localStorage.getItem("nome")}`;
 
             const dados = {
                 ponto: this.dateNow()
@@ -62,5 +62,7 @@
 
             alert('Ponto Marcado com Sucesso!!!')
         }
+
+        localStorage.tempo = 0;
     </script>
 </body>

@@ -11,10 +11,11 @@ function createButton() {
       const senhas = document.querySelector(".senhas").value
 
 
-      if (((usuario === usds.us1) && (senhas === usds.sns1)) || ((usuario === usds.us2) && (senhas === usds.sns2))) {
-         window.location.href = 'http://192.168.15.80:5000/home'
+      if (((usuario === usds.us1) && (senhas === usds.sns1)) || ((usuario === usds.us2) && (senhas === usds.sns2)) || ((usuario === usds.us3) && (senhas === usds.sns3))) {
+         window.location.href = 'http://192.168.15.120:5000/home'
          localStorage.logado = 1;
          localStorage.nome = usuario;
+         localStorage.tempo = 0;
       } else {
          alert(`Usuario ou Senha Invalida!!! Verifique as inforções e veja se estão corretas`)
          localStorage.logado = 0;
@@ -32,5 +33,7 @@ const usds = {
    us1 : 'DiegoC',
    sns1 : '12345',
    us2: 'Natanael',
-   sns2: '55321'
+   sns2: '55321',
+   us3: 'Mateus',
+   sns3: '77852'
 }
